@@ -1,0 +1,52 @@
+.custom-container-search hr{
+    color: white;
+    font-weight: 200;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.custom-container-search{
+    margin-top: 100px;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .custom-container-search {
+        width: 100%;
+    }
+}
+
+.search-title{
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+.search-subtitle{
+    font-weight: 100;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+.input-search{
+    margin: auto !important;
+    margin-right: 10px !important;
+}
+
+.form-control{
+    background-color: transparent !important;
+    border-radius: 25px !important;
+    color: white !important;
+}
+
+.mapped-results{
+    display: inline-block;
+    padding: 50px;
+}
+
+.mapped-image{
+    max-width: 100%;
+}

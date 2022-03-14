@@ -1,6 +1,6 @@
 import React from "react";
-import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 import "./Trending.css";
+import { Link } from "react-router-dom";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -16,7 +16,7 @@ export default class TVShows extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`https://api.themoviedb.org/3/trending/tv/week?api_key=${API_KEY}`)
+        fetch(`https://api.themoviedb.org/3/trending/${this.props.type}/${this.props.timeframe}?api_key=${API_KEY}`)
         .then(results => results.json())
         .then(data => {
             this.setState({
@@ -45,7 +45,9 @@ export default class TVShows extends React.Component {
                 <div className="scroll-tray">
                     <div key={data.id}>
                     {data.map(data => (
-                        <img src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt={data.name} className="scroll-tray-image"/>
+                        <Link to={`/view/${data.id}`} key={data.id}>
+                            <img src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt={data.name} className="scroll-tray-image"/>
+                        </Link>
                     ))}
                     </div>
                 </div>

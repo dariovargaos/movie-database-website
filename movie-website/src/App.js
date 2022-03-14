@@ -1,5 +1,5 @@
 import './App.css';
-import { CustomNavbar, TVShows } from './Components';
+import { CustomNavbar, Trending } from './Components';
 
 export default function App() {
   return (
@@ -11,7 +11,9 @@ export default function App() {
         <br/>All this is available on <b>Watch TV+**</b>.</p>
       </div>
 
-      <TVShows/>
+      <Trending type="tv" timeframe="day"/>
+      <Trending type="movie" timeframe="week"/>
+      <Trending type="tv" timeframe="week"/>
 
       <p className="legal">*TV Shows coming later this year.<br/> &copy; {new Date().getFullYear()} Dario Varga. All rights reserved.</p>
     </div>

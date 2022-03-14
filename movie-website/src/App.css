@@ -16,6 +16,7 @@ body{
   font-weight: 300;
   padding-bottom: 40px;
   padding-top: 40px;
+  margin-bottom: 0rem !important;
 }
 
 .main {
@@ -29,4 +30,13 @@ body{
   text-align: center;
   margin-top: 150px;
   margin-bottom: 150px;
+}
+
+h3.trending{
+  font-weight: 400;
+  font-size: 3em;
+}
+
+p.trending{
+  font-weight: 300;
 }
