@@ -11,9 +11,10 @@ export default function App() {
         <br/>All this is available on <b>Watch TV+**</b>.</p>
       </div>
 
-      <Trending type="tv" timeframe="day"/>
-      <Trending type="movie" timeframe="week"/>
-      <Trending type="tv" timeframe="week"/>
+      <Trending type="trending/movie" timeframe="day"/>
+      <Trending type="movie/top_rated" timeframe=""/>
+      <Trending type="trending/movie" timeframe="week"/>
+      
 
       <p className="legal">*TV Shows coming later this year.<br/> &copy; {new Date().getFullYear()} Dario Varga. All rights reserved.</p>
     </div>

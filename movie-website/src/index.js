@@ -4,7 +4,7 @@ import App from './App';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { MovieDetails, Search } from './Components';
+import { MovieDetails, Search, Rate } from './Components';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -16,6 +16,10 @@ ReactDOM.render(
       </Route>
 
       <Route path='search' element={<Search />} />
+
+      <Route path="rate" element={<Rate />}>
+        <Route path=":movieID" element={<Rate />}></Route>
+      </Route>
 
     </Routes>
     </BrowserRouter>,

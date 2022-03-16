@@ -16,7 +16,7 @@ export default class TVShows extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`https://api.themoviedb.org/3/trending/${this.props.type}/${this.props.timeframe}?api_key=${API_KEY}`)
+        fetch(`https://api.themoviedb.org/3/${this.props.type}/${this.props.timeframe}?api_key=${API_KEY}`)
         .then(results => results.json())
         .then(data => {
             this.setState({

@@ -48,8 +48,9 @@ export default function Search() {
                 <Row>
                     {results.map(results => 
                         <div key={results.id} className='mapped-results col-sm-3 col-sm-pull-12'>
-                            <img src={`https://image.tmdb.org/t/p/w500${results.poster_path}`} className="mapped-image" alt={results.original_title} />
-
+                            <Link to={`/view/${results.id}`}>
+                                <img src={`https://image.tmdb.org/t/p/w500${results.poster_path}`} className="mapped-image" alt={results.original_title} />
+                            </Link>
                         </div>
                         )}
                     <Card>
