@@ -14,13 +14,14 @@ export default function Rate() {
     const [session, setSession] = useState();
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/authentication/guest_session/new/?api_keys=${API_KEY}&guest_session_id=${session}`)
+        fetch(`https://api.themoviedb.org/3/authentication/guest_session/new/?api_keys=${API_KEY}`)
             .then(response => response.json()) //proizvoljno ime
             .then(data => setSession(data.guest_session_id))
     }, [])
 
     function handleSubmit(e) {
         e.preventDefault();
+        navigate("/");
         const movieRating = { "value": `${rate}`}
         fetch(` https://api.themoviedb.org/3/movie/${params.movieID}/rating?api_key=${API_KEY}`, {
             method: "POST",

@@ -38,7 +38,7 @@ export default function MovieDetails() {
 
                 <div className='details'>
                     <h5>Audience score</h5>
-                    <p>{show.vote_average}/10</p>
+                    <p>{show.vote_average}/10 (based on {show.vote_count} votes)</p>
 
                     <h5>Revenue</h5>
                     <p>${show.revenue?.toLocaleString('de-DE')}</p>
